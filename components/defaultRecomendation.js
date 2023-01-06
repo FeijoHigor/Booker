@@ -5,13 +5,13 @@ function DefaultRecomendationCard(props) {
     return (
         <div>
             <h3>{categorie.name}</h3>
-            {/* <div>
+            <div>
                 {
                     categorie.books.map((e, i) => (
                         <p key={e.id}>{e.name}</p>
                     ))
                 }
-            </div> */}
+            </div>
         </div>
     )
 }
