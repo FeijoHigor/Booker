@@ -2,7 +2,7 @@ import Display from "../components/_ui/display/index"
 
 export async function getStaticProps(context) {
     const actUrl = process.env.VERCEL_URL
-    const recomendedBooksCall = await fetch(`${actUrl}api/recomendation`)
+    const recomendedBooksCall = await fetch(`${actUrl}/api/recomendation`)
 
     const recomendedBooksJson = await recomendedBooksCall.json()
     const recomendedBooks = recomendedBooksJson
