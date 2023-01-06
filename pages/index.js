@@ -24,7 +24,7 @@ function Home(props) {
             <DayRecomendationCard books={recomendedBooks.dayRecomendation} />
             {
                 recomendedBooks.categories.map((e, i) => (
-                    <DefaultRecomendation categorie={e} />
+                    <DefaultRecomendation categorie={e} key={e.id} />
                 ))
             }
         </Display>
