@@ -32,7 +32,7 @@ function recomendation(request, response) {
     const date = new Date()
     const calledDate = date.toString()
 
-    response.setHeader("Cache-Control", "s-maxage=10, stale-while-revalidate")
+    response.setHeader("Cache-Control", "s-maxage=300, stale-while-revalidate")
     
     response.json({
         calledDate,
