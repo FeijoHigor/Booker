@@ -24,12 +24,16 @@ function recomendation(request, response) {
         {name: '10/10/21', id: 6},
     ]
 
+    const date = new Date()
+    const calledDate = date.toString()
+
     response.setHeader("Cache-Control", "s-maxage=10, stale-while-revalidate")
     
     response.json({
         mostLiked,  
         mostRead,
-        dayRecomendation
+        dayRecomendation,
+        calledDate
     })
 }
 
