@@ -22,11 +22,11 @@ function Home(props) {
     return (
         <Display>
             <DayRecomendationCard books={recomendedBooks.dayRecomendation} />
-            {/* {
+            {
                 recomendedBooks.categories.map((e, i) => (
                     <DefaultRecomendation categorie={e} key={e.id} />
                 ))
-            } */}
+            }
         </Display>
     )
 }
