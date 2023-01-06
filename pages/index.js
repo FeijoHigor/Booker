@@ -1,4 +1,6 @@
 import Display from "../components/_ui/display/index"
+import DayRecomendationCard from "../components/dayRecomendationCard"
+import DefaultRecomendation from "../components/defaultRecomendation"
 
 export async function getStaticProps() {
     const recomendedBooksCall = await fetch(`${process.env.API_URL}/api/recomendation`)
@@ -19,15 +21,11 @@ function Home(props) {
 
     return (
         <Display>
-            <h1>Hello</h1>
+            <DayRecomendationCard books={recomendedBooks.dayRecomendation} />
             {
-                recomendedBooks.mostLiked.map((e, i) => 
-                    (
-                        <div key={e.id}>
-                            {e.name}
-                        </div>
-                    )
-                )
+                recomendedBooks.categories.map((e, i) => (
+                    <DefaultRecomendation categorie={e} />
+                ))
             }
         </Display>
     )
