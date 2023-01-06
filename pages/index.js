@@ -1,15 +1,14 @@
 import Display from "../components/_ui/display/index"
 
-export async function getStaticProps(context) {
-    const actUrl = process.env.VERCEL_URL
-    const recomendedBooksCall = await fetch(`${process.env.VERCEL_ENV == 'development' ? '' : 'https://'}${actUrl}/api/recomendation`)
+export async function getStaticProps() {
+    const recomendedBooksCall = await fetch(`${process.env.API_URL}/api/recomendation`)
 
     const recomendedBooksJson = await recomendedBooksCall.json()
     const recomendedBooks = recomendedBooksJson
 
     return {
         props: {
-            recomendedBooks
+            recomendedBooks,
         }
     }
 }
@@ -17,20 +16,19 @@ export async function getStaticProps(context) {
 function Home(props) {
 
     const recomendedBooks = props.recomendedBooks
+
     return (
         <Display>
             <h1>Hello</h1>
-            <div>
-                {
-                    recomendedBooks.mostLiked.map((e, i) => 
-                        (
-                            <div>
-                                {e.name}
-                            </div>
-                        )
+            {
+                recomendedBooks.mostLiked.map((e, i) => 
+                    (
+                        <div key={e.id}>
+                            {e.name}
+                        </div>
                     )
-                }
-            </div>
+                )
+            }
         </Display>
     )
 }
