@@ -3,37 +3,32 @@ import DayRecomendationCard from "../components/dayRecomendationCard"
 import DefaultRecomendation from "../components/defaultRecomendation"
 
 export async function getStaticProps() {
-    /* const recomendedBooksCall = await fetch(`${process.env.API_URL}/api/recomendation`)
+    const recomendedBooksCall = await fetch(`${process.env.API_URL}/api/recomendation`)
 
-    const recomendedBooksJson = await recomendedBooksCall.json()
-    const recomendedBooks = recomendedBooksJson
+    const recomendedBooks = await recomendedBooksCall.json()
 
     return {
         props: {
             recomendedBooks,
-        }
-    } */
-
-    return {
-        props: {
             urlApi: process.env.API_URL
         }
     }
+
 }
 
 function Home(props) {
 
-    //const recomendedBooks = props.recomendedBooks
+    const recomendedBooks = props.recomendedBooks
     console.log(props.urlApi)
 
     return (
         <Display>
-            {/* <DayRecomendationCard books={recomendedBooks.dayRecomendation} />
+            <DayRecomendationCard books={recomendedBooks.dayRecomendation} />
             {
                 recomendedBooks.categories.map((e, i) => (
                     <DefaultRecomendation categorie={e} key={e.id} />
                 ))
-            } */}
+            }
         </Display>
     )
 }
