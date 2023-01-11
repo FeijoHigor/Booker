@@ -1,6 +1,6 @@
 function RecomendedBookBanner(props) {
     return (
-        <div className={`slide ${props.first ? 's1' : ''}`}>
+        <div>
             <h3>{props.bookName}</h3>
             <style jsx>
                 {`
@@ -23,10 +23,10 @@ function DayRecomendationCard(props) {
     return (
         <>
             <h2>Recomendação do dia</h2>
-            <div className="slides">
+            <div>
                 {
                     books.map((e, i) => (
-                        <RecomendedBookBanner first={i == 0 ? true : false} key={e.id} bookName={e.name} />
+                        <RecomendedBookBanner key={e.id} bookName={e.name} />
                     ))
                 }   
             </div>
