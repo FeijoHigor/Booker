@@ -14,18 +14,16 @@ function Header() {
             <style jsx>
                 {`
                     header {
-                        position: absolute;
-                        top: 0;
                         background: #52AFD7;
                         width: 100%;
                         color: #fff;
                         height: 60px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        display: block;
+                        text-align: center;
                     }
 
                     div {
+                        height: 100%;
                         display: flex; 
                         align-items: center;
                         justify-content: space-between;

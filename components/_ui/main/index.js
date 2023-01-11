@@ -10,25 +10,13 @@ function Main(props) {
                 {`
                     main {
                         width: 100%;
-                        height: 80%;
-                        display: flex;
-                        justify-content: center;
-                        margin: 70px 0 30px 0;
-                    }
-
-                    @media (max-height: 700px) {
-                        main {
-                            height: 75%;
-                        }
-                    }
-
-                    @media (max-height: 500px) {
-                        main {
-                            height: 65%;
-                        }
+                        min-height: 100vh;
+                        display: block;
+                        margin: 0;
                     }
 
                     div {
+                        margin: auto;
                         width: 90%;
                         overflow: hidden;
                     }

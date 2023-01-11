@@ -11,8 +11,6 @@ function Footer() {
                     footer {
                         background: #7BA1B0;
                         display:block;
-                        position: absolute;
-                        bottom: 0;
                         width: 100%;
                     }
 
