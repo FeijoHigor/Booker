@@ -2,18 +2,24 @@ function Footer() {
 
     return (
         <footer>
-            <h3>Booker</h3>
-            <p>₢Copyright 2023</p>
+            <div className="footer-container">
+                <h3>Booker</h3>
+                <p>₢Copyright 2023</p>
+            </div>
             <style jsx>
                 {`
                     footer {
-                        position: fixed;
-                        bottom: 0;
                         background: #7BA1B0;
+                        display:block;
+                        position: absolute;
+                        bottom: 0;
                         width: 100%;
-                        color: #fff;
+                    }
+
+                    .footer-container {
                         display: flex;
                         align-items: center;
+                        width: 100%;
                         justify-content: center;
                     }
 

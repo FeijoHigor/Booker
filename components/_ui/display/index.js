@@ -16,18 +16,15 @@ function Display(props) {
 
                     body {
                         background: #181E20;
-                        height: 100vh;
                     }
 
                     #__next {
-                        height: inherit;
-                        display: flex;
-                        align-items: center;
+                        margin: 0;
                     }
 
                     html {
                         font-family: Jost;
-                        height: 100vh;
+                        color: #d9d9d9;
                     }
 
                     h2 {

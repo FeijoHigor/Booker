@@ -10,6 +10,9 @@ function RecomendedBookBanner(props) {
                         height: 300px;
                     }
 
+                    h3 {
+                        color: #181E20;
+                    }
                 `}
             </style>
         </div>

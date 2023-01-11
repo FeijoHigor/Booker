@@ -11,9 +11,9 @@ function Main(props) {
                     main {
                         width: 100%;
                         height: 80%;
-                        margin-top: 20px;
                         display: flex;
                         justify-content: center;
+                        margin: 70px 0 30px 0;
                     }
 
                     @media (max-height: 700px) {
