@@ -30,6 +30,7 @@ function Main(props) {
 
                     div {
                         width: 90%;
+                        overflow: hidden;
                     }
                 `}
             </style>

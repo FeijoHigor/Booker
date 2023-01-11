@@ -7,7 +7,7 @@ function Footer() {
             <style jsx>
                 {`
                     footer {
-                        position: absolute;
+                        position: fixed;
                         bottom: 0;
                         background: #7BA1B0;
                         width: 100%;
