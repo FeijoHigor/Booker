@@ -12,7 +12,7 @@ function Main(props) {
                         width: 100%;
                         min-height: 100vh;
                         display: block;
-                        margin: 0;
+                        margin: 20px 0;
                     }
 
                     div {
