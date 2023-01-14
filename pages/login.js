@@ -1,8 +1,14 @@
+import Display from "../components/_ui/display/index"
+
 function Login() {
     return (
-        <div>
-            Login
-        </div>
+        <Display>
+            <section>
+                <form>
+
+                </form>
+            </section>
+        </Display>
     )
 }
 
